@@ -18,16 +18,18 @@ public class PresenceComponent extends ImageView{
     private PresenceSensor  item;
     public PresenceComponent(){
         super();
+        this.maxWidth(48d);
+        this.maxHeight(48d);
         this.item= new PresenceSensor();
          this.setImage(Resources.getInstance().getImage("sensor_presencia_off"));
         this.setOnMousePressed((t) -> {
             if(this.item.getState()==EBooleanState.ON){
                 this.item.setState(EBooleanState.OFF);
-                this.setImage(Resources.getInstance().getImage("switch_off"));
+                this.setImage(Resources.getInstance().getImage("sensor_presencia_off"));
             }
             else{
                  this.item.setState(EBooleanState.ON);
-                this.setImage(Resources.getInstance().getImage("switch_on"));
+                this.setImage(Resources.getInstance().getImage("sensor_presencia_on"));
          
             }
         });

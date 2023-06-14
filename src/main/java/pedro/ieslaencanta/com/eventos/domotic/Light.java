@@ -56,11 +56,11 @@ public class Light implements ISensorListener,ISwitchListener, IDevice, Runnable
     @Override
     public void onSensorChange(SensorEvent event) {
         if (((IDeviceBoolean) event.getSource()).getState() == EBooleanState.OFF) {
-            // this.modo_alarma = false;
+             this.modo_alarma = false;
             this.setOff();
            
         } else {
-            // this.modo_alarma = true;
+             this.modo_alarma = true;
             this.setOn();
         }
     }
@@ -119,11 +119,11 @@ public class Light implements ISensorListener,ISwitchListener, IDevice, Runnable
     @Override
     public void onSwitchChange(SwitchEvent event) {
           if (((IDeviceBoolean) event.getSource()).getState() == EBooleanState.OFF) {
-            // this.modo_alarma = false;
+           
             this.setOff();
            
         } else {
-            // this.modo_alarma = true;
+          
             this.setOn();
         }
      }
