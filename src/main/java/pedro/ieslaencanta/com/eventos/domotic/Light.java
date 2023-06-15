@@ -109,6 +109,7 @@ public class Light implements ISensorListener,ISwitchListener, IDevice, Runnable
     @Override
     public void Stop() {
         this.changeDeviceState(deviceState.Stopped);
+        
     }
 
     @Override
