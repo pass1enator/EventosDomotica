@@ -25,16 +25,16 @@ public class Resources {
         {"switch_on", "interruptor-encendido.png"},
         {"switch_off", "interruptor-apagado.png"},
         {"sensor_presencia_on", "sensor_presencia_on.png"},
-        {"sensor_presencia_off", "sensor_presencia_off.png"}
-    /*,
-        {"player", "Player.png"},
-        {"animals", "Animals.png"},
-        {"weapons", "ItemsWeapons.png"},
-        {"ballons", "Balloons.png"},
-        {"bricks", "Foreground.png"}*/
+        {"sensor_presencia_off", "sensor_presencia_off.png"},
+        {"sin_sonido", "sin_sonido.png"},
+        {"sonido_alto", "sonido_alto.png"},
+        {"sonido_bajo", "sonido_bajo.png"},
+        {"sonido_medio", "sonido_medio.png"}
+   
 
     };
-    private String path_sonidos[][] = { /* {"wall", "BallBounce.wav"},
+    private String path_sonidos[][] = {  {"sonido", "sonido.wav"}
+            /*,
     {"shoot", "BubbleShot.wav"},
     {"jump", "jump1.wav"},
     {"intro", "intro.wav"},

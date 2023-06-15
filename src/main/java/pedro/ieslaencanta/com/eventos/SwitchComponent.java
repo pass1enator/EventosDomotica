@@ -5,35 +5,37 @@
 package pedro.ieslaencanta.com.eventos;
 
 import javafx.scene.image.ImageView;
-import pedro.ieslaencanta.com.eventos.domotic.EBooleanState;
-import pedro.ieslaencanta.com.eventos.domotic.Light;
-import pedro.ieslaencanta.com.eventos.domotic.PresenceSensor;
-import pedro.ieslaencanta.com.eventos.domotic.Switch;
+import pedro.ieslaencanta.com.eventos.domotic.devices.EBooleanState;
+import pedro.ieslaencanta.com.eventos.domotic.devices.Light;
+import pedro.ieslaencanta.com.eventos.domotic.devices.PresenceSensor;
+import pedro.ieslaencanta.com.eventos.domotic.devices.Switch;
 
 /**
  *
  * @author Pedro
  */
-public class SwitchComponent extends ImageView{
-    private Switch  sswitch;
-    public SwitchComponent(){
+public class SwitchComponent extends ImageView {
+
+    private Switch sswitch;
+
+    public SwitchComponent() {
         super();
-        this.sswitch= new Switch();
-         this.setImage(Resources.getInstance().getImage("switch_off"));
+        this.sswitch = new Switch();
+        this.setImage(Resources.getInstance().getImage("switch_off"));
+        //evento de la imagen al pulsar, cambia la imagen y se cambia el estado
+        //del switch interno
         this.setOnMousePressed((t) -> {
-            if(this.sswitch.getState()==EBooleanState.ON){
+            if (this.sswitch.getState() == EBooleanState.ON) {
                 this.sswitch.setState(EBooleanState.OFF);
                 this.setImage(Resources.getInstance().getImage("switch_off"));
-            }
-            else{
-                 this.sswitch.setState(EBooleanState.ON);
+            } else {
+                this.sswitch.setState(EBooleanState.ON);
                 this.setImage(Resources.getInstance().getImage("switch_on"));
-         
+
             }
         });
     }
-    public Switch getSwitch(){
+    public Switch getSwitch() {
         return this.sswitch;
     }
-    
 }

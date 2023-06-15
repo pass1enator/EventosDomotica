@@ -7,11 +7,11 @@ package pedro.ieslaencanta.com.eventos;
 import javafx.beans.value.ChangeListener;
 import javafx.scene.control.Slider;
 import javafx.scene.image.ImageView;
-import pedro.ieslaencanta.com.eventos.domotic.Dimmer;
-import pedro.ieslaencanta.com.eventos.domotic.EBooleanState;
-import pedro.ieslaencanta.com.eventos.domotic.Light;
-import pedro.ieslaencanta.com.eventos.domotic.PresenceSensor;
-import pedro.ieslaencanta.com.eventos.domotic.Switch;
+import pedro.ieslaencanta.com.eventos.domotic.devices.Dimmer;
+import pedro.ieslaencanta.com.eventos.domotic.devices.EBooleanState;
+import pedro.ieslaencanta.com.eventos.domotic.devices.Light;
+import pedro.ieslaencanta.com.eventos.domotic.devices.PresenceSensor;
+import pedro.ieslaencanta.com.eventos.domotic.devices.Switch;
 
 /**
  *

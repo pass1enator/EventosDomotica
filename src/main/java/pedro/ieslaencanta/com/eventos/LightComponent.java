@@ -6,8 +6,8 @@ package pedro.ieslaencanta.com.eventos;
 
 import java.util.function.Consumer;
 import javafx.scene.image.ImageView;
-import pedro.ieslaencanta.com.eventos.domotic.EBooleanState;
-import pedro.ieslaencanta.com.eventos.domotic.Light;
+import pedro.ieslaencanta.com.eventos.domotic.devices.EBooleanState;
+import pedro.ieslaencanta.com.eventos.domotic.devices.Light;
 
 /**
  *
@@ -21,17 +21,7 @@ public class LightComponent extends ImageView{
         this.ligth= new Light();
         this.ligth.setLc(this);
          this.setImage(Resources.getInstance().getImage("light_off"));
-        this.setOnMousePressed((t) -> {
-            if(this.ligth.getLightState()==EBooleanState.ON){
-                this.ligth.setOff();
-            }
-            else{
-                this.ligth.setOn();
-          
-            }
-        });
-       
-      
+
     }
     public void setOn(){
                this.setImage(Resources.getInstance().getImage("light_on"));
@@ -44,6 +34,5 @@ public class LightComponent extends ImageView{
     public Light getLight(){
         return this.ligth;
     }
-   
-    
+  
 }

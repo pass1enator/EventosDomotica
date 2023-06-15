@@ -13,7 +13,9 @@ import javafx.scene.layout.GridPane;
 import javafx.scene.layout.StackPane;
 import javafx.stage.Stage;
 import javafx.stage.WindowEvent;
-import pedro.ieslaencanta.com.eventos.domotic.IDevice;
+import pedro.ieslaencanta.com.eventos.domotic.devices.Player;
+import pedro.ieslaencanta.com.eventos.domotic.devices.interfaces.IDevice;
+
 
 /**
  * JavaFX App
@@ -41,26 +43,21 @@ public class App extends Application {
         this.grid = new GridPane();
         this.grid.setMinSize(640, 480);
         this.grid.setAlignment(Pos.CENTER);
-        var ligth = new LightComponent();//eView(Resources.getInstance().getImage("light_on"));
-        var sswitch= new SwitchComponent();
-        var psenso= new PresenceComponent();
-        
+        var ligth = new LightComponent();
+        var sswitch= new SwitchComponent(); 
+        var dimmer= new DimmerComponent();
         sswitch.getSwitch().addChangeStateListener(ligth.getLight());
-        psenso.getElement().addChangeStateListener(ligth.getLight());
+        var player= new Player();
+        sswitch.getSwitch().addChangeStateListener(player);
+        dimmer.getElement().addChangeStateListener(player);
         this.devices.add(ligth.getLight());
         this.devices.add(sswitch.getSwitch());
-        this.devices.add(psenso.getElement());
-        this.devices.forEach( c-> {c.Start();});
-        
+        this.devices.add(player);
+        this.devices.add(dimmer.getElement());
+        this.devices.forEach( c-> {c.Start();});      
         this.grid.add(ligth, 0, 0);
         this.grid.add( sswitch, 1, 0);
-        this.grid.add(psenso, 0, 1);
-        /*image.setOnMouseClicked((t) -> {
-                    image.setImage(Resources.getInstance().getImage("light_off"));
-     
-        });*/
-      
-
+        this.grid.add(dimmer, 0, 1);
     }
 
     public static void main(String[] args) {
