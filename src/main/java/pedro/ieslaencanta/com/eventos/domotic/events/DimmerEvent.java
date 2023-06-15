@@ -10,9 +10,9 @@ import java.util.EventObject;
  *
  * @author Pedro
  */
-public class SensorEvent extends EventObject {
+public class DimmerEvent extends EventObject {
 
-    public SensorEvent(Object source) {
+    public DimmerEvent(Object source) {
         super(source);
     }
 }
